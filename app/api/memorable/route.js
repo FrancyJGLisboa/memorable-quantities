@@ -73,7 +73,6 @@ export async function POST(req) {
       .replace(/\s+/g, ' ')
       .trim();
 
-    const langPrompts = LANGUAGE_PROMPTS[language] || LANGUAGE_PROMPTS.en;
     const references = REFERENCE_MEASUREMENTS[comparisonType] || REFERENCE_MEASUREMENTS.general;
 
     const response = await deepSeekClient.chat.completions.create({

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const COMPARISON_LIBRARIES = {
   general: "General (Mixed)",
@@ -27,7 +27,6 @@ const LANGUAGES = {
 };
 
 export default function Home() {
-  const [theme, setTheme] = useState('light');
   const [comparisonType, setComparisonType] = useState('general');
   const [language, setLanguage] = useState('en');
   const [error, setError] = useState(null);
@@ -37,11 +36,6 @@ export default function Home() {
   const [streamedText, setStreamedText] = useState('');
   const [isStreaming, setIsStreaming] = useState(false);
   const [copiedIndex, setCopiedIndex] = useState(null);
-
-  // Load theme on mount - force light theme
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', 'light');
-  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
