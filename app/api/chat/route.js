@@ -1,4 +1,4 @@
-import deepSeekClient from '@/lib/deepSeekClient';
+import deepSeekClient from '../../../lib/deepSeekClient';
 import { NextResponse } from 'next/server';
 
 export async function POST(req) {
