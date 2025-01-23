@@ -35,22 +35,6 @@ const REFERENCE_MEASUREMENTS = {
   }
 };
 
-const LANGUAGE_PROMPTS = {
-  en: {
-    prefix: "Original",
-    units: "Units",
-    equivalent: "Equivalent",
-    calculation: "Calculation"
-  },
-  pt: {
-    prefix: "Original",
-    units: "Unidades",
-    equivalent: "Equivalente",
-    calculation: "Cálculo"
-  }
-  // Add other languages as needed
-};
-
 export const runtime = 'edge'; // Enable edge runtime for streaming
 
 export async function POST(req) {
